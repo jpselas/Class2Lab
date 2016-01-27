@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package activity2;
+package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author John
  */
-@WebServlet(name = "PageGenerator", urlPatterns = {"/PageGenerator"})
+@WebServlet(name = "PageGenerator", urlPatterns = {"/pager"})
 public class PageGenerator extends HttpServlet {
 
     /**
@@ -41,6 +41,26 @@ public class PageGenerator extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet PageGenerator at " + request.getContextPath() + "</h1>");
+            out.println("<center><h1>The Table Of Packers</h1></center>\n" +
+"<center><table width=\"600\" border=\"1\" cellspacing=\"2\" cellpadding=\"5\">\n" +
+"  <tbody>\n" +
+"    <tr>\n" +
+"      <td>Go</td>\n" +
+"      <td>Pack</td>\n" +
+"      <td>Go</td>\n" +
+"    </tr>\n" +
+"    <tr>\n" +
+"      <td>Go</td>\n" +
+"      <td>Pack</td>\n" +
+"      <td>Go</td>\n" +
+"    </tr>\n" +
+"    <tr>\n" +
+"      <td>Go</td>\n" +
+"      <td>Pack</td>\n" +
+"      <td>Go</td>\n" +
+"    </tr>\n" +
+"  </tbody>\n" +
+"</table></center>");
             out.println("</body>");
             out.println("</html>");
         }
