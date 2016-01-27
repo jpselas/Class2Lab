@@ -20,7 +20,7 @@ public class WelcomeService {
         
         if(time > 12 && time<17){
             greeting = "afternoon";
-        }else if(time>17 && time < 24){
+        }else if(time>=17 && time < 24){
             greeting = "evening";
         }else{
             greeting = "morning";
